@@ -1,7 +1,7 @@
 # 📌 Analisi delle Performance di un Modello Data-Driven per la Suscettibilità ai Crolli in Roccia
 
 ## 📖 Descrizione
-Questo repository contiene il codice e i dati utilizzati per l'analisi delle performance di un modello data-driven per la suscettibilità ai crolli in roccia nella Regione Valle d'Aosta. Il progetto confronta le performance del modello Generalized Additive Model (GAM) con la metodologia Multivariate Environmental Similarity Surface (MESS), valutando l'effetto della dissimilarità tra le aree di training e test.
+Questo repository contiene il codice per l'analisi delle performance di un modello data-driven per la suscettibilità ai crolli in roccia nella Regione Valle d'Aosta. Il progetto confronta le performance del modello Generalized Additive Model (GAM) con la metodologia Multivariate Environmental Similarity Surface (MESS), valutando l'effetto della dissimilarità tra le aree di training e test.
 
 L'analisi è suddivisa in due principali aree di studio:
 
