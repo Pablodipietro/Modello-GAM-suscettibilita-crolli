@@ -1,6 +1,6 @@
-📌 Analisi delle Performance di un Modello Data-Driven per la Suscettibilità ai Crolli in Roccia
+# 📌 Analisi delle Performance di un Modello Data-Driven per la Suscettibilità ai Crolli in Roccia
 
-📖 Descrizione
+## 📖 Descrizione
 Questo repository contiene il codice e i dati utilizzati per l'analisi delle performance di un modello data-driven per la suscettibilità ai crolli in roccia nella Regione Valle d'Aosta. Il progetto confronta le performance del modello Generalized Additive Model (GAM) con la metodologia Multivariate Environmental Similarity Surface (MESS), valutando l'effetto della dissimilarità tra le aree di training e test.
 
 L'analisi è suddivisa in due principali aree di studio:
@@ -9,7 +9,7 @@ Area 1: Comunità Montane Mont Emilius e Mont Cervin.
 Area 2: Comunità Montane Evançon, Monte Rosa e Walser Alta Valle del Lys.
 📄 Il lavoro si basa sulla mia tesi magistrale in Scienze della Terra, con focus sull’integrazione di variabili geologiche, topografiche e meteoclimatiche per migliorare la previsione del rischio di crolli in roccia.
 
-📂 Struttura del Repository
+## 📂 Struttura del Repository
 bash
 Copia
 Modifica
@@ -28,7 +28,7 @@ Modifica
 ├── Tesi_VdA.pdf              # Documento completo della tesi
 │
 └── README.md                 # Questo file
-🛠 Installazione
+## 🛠 Installazione
 1️⃣ Prerequisiti
 R (≥ 4.0)
 Pacchetti R: ggplot2, raster, sf, tidyverse, mgcv, dismo, sperrorest, pROC
@@ -56,7 +56,7 @@ Modellazione della suscettibilità ai crolli con GAM
 Calcolo delle metriche MESS e AUROC
 Validazione con cross-validation random e K-means
 Generazione di grafici per l’interpretazione dei risultati
-📊 Output e Risultati
+## 📊 Output e Risultati
 I risultati sono salvati nella cartella results/ e includono:
 
 mess_auroc_CV.csv → Performance del modello in cross-validation.
@@ -64,9 +64,9 @@ Grafici nella cartella plots/, inclusi:
 CV_mess_vs_diff_perf.jpg
 boxplot_auroc_scores.jpg
 A1_kmean_divided_train.jpg
-📌 Possibili Estensioni
+## 📌 Possibili Estensioni
 Espansione del dataset: aggiungere nuove aree geografiche o aggiornare i dati meteoclimatici.
 Testare altri algoritmi di Machine Learning: come Random Forest o XGBoost per confrontare le prestazioni con GAM.
 Automatizzare l'analisi con un workflow completo in RMarkdown o Jupyter Notebook.
-📜 Licenza
+## 📜 Licenza
 Questo progetto è distribuito sotto licenza MIT - puoi liberamente modificarlo e condividerlo.
