@@ -7,12 +7,11 @@ L'analisi è suddivisa in due principali aree di studio:
 
 Area 1: Comunità Montane Mont Emilius e Mont Cervin.
 Area 2: Comunità Montane Evançon, Monte Rosa e Walser Alta Valle del Lys.
+
 📄 Il lavoro si basa sulla mia tesi magistrale in Scienze della Terra, con focus sull’integrazione di variabili geologiche, topografiche e meteoclimatiche per migliorare la previsione del rischio di crolli in roccia.
 
 ## 📂 Struttura del Repository
-bash
-Copia
-Modifica
+````
 ├── data/                     # Dati di input utilizzati per il modello
 │   ├── Area1_Rmodel.csv
 │   ├── Area2_Rmodel.csv
@@ -28,6 +27,7 @@ Modifica
 ├── Tesi_VdA.pdf              # Documento completo della tesi
 │
 └── README.md                 # Questo file
+````
 ## 🛠 Installazione
 1️⃣ Prerequisiti
 R (≥ 4.0)
@@ -35,17 +35,14 @@ Pacchetti R: ggplot2, raster, sf, tidyverse, mgcv, dismo, sperrorest, pROC
 2️⃣ Installazione dei Pacchetti
 Apri RStudio e installa i pacchetti richiesti:
 
-r
-Copia
-Modifica
-install.packages(c("ggplot2", "raster", "sf", "tidyverse", "mgcv", "dismo", "sperrorest", "pROC"))
+`install.packages(c("ggplot2", "raster", "sf", "tidyverse", "mgcv", "dismo", "sperrorest", "pROC"))`
+
 🚀 Esecuzione dell'Analisi
+
 1️⃣ Carica lo script principale in R:
 
-r
-Copia
-Modifica
-source("scripts/MESS_comparison.R")
+`source("scripts/MESS_comparison.R")`
+
 2️⃣ Assicurati che i file CSV siano presenti nella cartella data/.
 
 3️⃣ Lo script esegue le seguenti operazioni:
