@@ -32,12 +32,13 @@ Area 2: Comunità Montane Evançon, Monte Rosa e Walser Alta Valle del Lys.
 1️⃣ Prerequisiti
 R (≥ 4.0)
 Pacchetti R: ggplot2, raster, sf, tidyverse, mgcv, dismo, sperrorest, pROC
+
 2️⃣ Installazione dei Pacchetti
 Apri RStudio e installa i pacchetti richiesti:
 
 `install.packages(c("ggplot2", "raster", "sf", "tidyverse", "mgcv", "dismo", "sperrorest", "pROC"))`
 
-🚀 Esecuzione dell'Analisi
+## 🚀 Esecuzione dell'Analisi
 
 1️⃣ Carica lo script principale in R:
 
