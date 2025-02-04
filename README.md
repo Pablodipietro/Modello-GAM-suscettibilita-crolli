@@ -6,6 +6,7 @@ Questo repository contiene il codice per l'analisi delle performance di un model
 L'analisi è suddivisa in due principali aree di studio:
 
 Area 1: Comunità Montane Mont Emilius e Mont Cervin.
+
 Area 2: Comunità Montane Evançon, Monte Rosa e Walser Alta Valle del Lys.
 
 📄 Il lavoro si basa sulla mia tesi magistrale in Scienze della Terra, con focus sull’integrazione di variabili geologiche, topografiche e meteoclimatiche per migliorare la previsione del rischio di crolli in roccia.
