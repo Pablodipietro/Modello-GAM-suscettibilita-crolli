@@ -802,7 +802,6 @@ import_A2 <- function() {
   east <- raster("Area2/East_A2.tif")
   planarC <- raster("Area2/PlanarC_A2.tif")
   profileC <- raster("Area2/ProfileC_A2.tif")
-  ngss <- raster("Area2/NGSS_PROJECT_A2.tif")
   ft <- raster("Area2/FT_RES_A2.tif")
   ewi <- raster("Area2/EWI_A2.tif")
   wd <- raster("Area2/WD_A2.tif")
@@ -815,8 +814,6 @@ import_A2 <- function() {
   planarC[planarC < -5] <- -5
   profileC[profileC > 5] <- 5
   profileC[profileC < -5] <- -5
-  ngss[ngss < 55] <- 55
-  ngss[ngss > 118] <- 118
   ft[ft < 17] <- 17
   ft[ft > 75] <- 75
   ewi[ewi > 17] <- 17
@@ -825,7 +822,6 @@ import_A2 <- function() {
   wd[wd < 130] <- 130
   
   # Align rasters to match the slope raster
-  ngss <- resample(ngss, slope, method = "bilinear")
   ft <- resample(ft, slope, method = "bilinear")
   ewi <- resample(ewi, slope, method = "bilinear")
   wd <- resample(wd, slope, method = "bilinear")
