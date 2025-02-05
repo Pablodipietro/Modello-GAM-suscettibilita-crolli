@@ -832,80 +832,6 @@ import_A2 <- function() {
   
   return(s)
 }
-
-# Example usage:
-s2_agg <- import_A2()
-
-# We try to reduce the size for increase speed and a better view
-s2_agg <- aggregate(s2_agg, fact = 1, fun = mean)
-
-
-mess <- mess(s2_agg, train_data, full = TRUE, filename = "plots/MESS_raster/mess_Area2.tiff", overwrite=TRUE)
-names(mess) <- c("Slope", "East", "PlanarC", "ProfileC", "WD", "EWI", "FT", "TOTAL")
-
-### Individual plot MESS ----
-plot(mess)
-plot(mess[["FT"]], main="FT")
-plot(mess[["Slope"]], main="Slope")
-plot(mess[["East"]], main="East")
-plot(mess[["PlanarC"]], main="PlanarC")
-plot(mess[["ProfileC"]], main="ProfileC")
-plot(mess[["WD"]], main="WD")
-plot(mess[["EWI"]], main="EWI")
-#plot(mess[["NGSS"]], main="NGSS")
-plot(mess[["FT"]], main="FT")
-plot(mess[["TOTAL"]], main="TOTAL")
-
-## Mess con raster Area 2 ####
-keeps = c("Slope", "East", "PlanarC", "ProfileC", "WD", "EWI",  "FT")
-
-train_data <- Area2[ , keeps, drop = FALSE]
-
-## RASTER MESS
-s1_agg
-
-# Example usage:
-s1_agg <- import_A1()
-
-s1_agg <- dropLayer(s1_agg, which(names(s1_agg) == "Cord_Y"))
-
-# We try to reduce the size for increase speed and a better view
-s1_agg <- aggregate(s1_agg, fact = 1, fun = mean)
-
-
-mess <- mess(s2_agg, train_data, full = TRUE, filename = "plots/MESS_raster/mess_Area1.tiff", overwrite=TRUE)
-names(mess) <- c("Slope", "East", "PlanarC", "ProfileC", "WD", "EWI", "FT", "TOTAL")
-
-### Individual plot MESS ----
-plot(mess)
-plot(mess[["FT"]], main="FT")
-plot(mess[["Slope"]], main="Slope")
-plot(mess[["East"]], main="East")
-plot(mess[["PlanarC"]], main="PlanarC")
-plot(mess[["ProfileC"]], main="ProfileC")
-plot(mess[["WD"]], main="WD")
-plot(mess[["EWI"]], main="EWI")
-#plot(mess[["NGSS"]], main="NGSS")
-plot(mess[["FT"]], main="FT")
-plot(mess[["TOTAL"]], main="TOTAL")
-
-
-## Apply model ####
-# Re-defining the functions
-# General formulas to fit presence1 
-fo.1 <- Crollo ~ Cord_Y + Slope + 
-  East+ PlanarC + ProfileC + WD + EWI + FT
-
-sfo.1 <- Crollo ~ s(Cord_Y) + s(Slope) + 
-  s(East) + s(PlanarC) + s(ProfileC) + s(WD) + s(EWI) + s(FT)
-
-# Function to train the GAM model
-my.gam <- function(formula, data, family = binomial, smooth_formula, method = "REML", select = TRUE) {
-  fit <- gam(smooth_formula, data = data, family = family, method = method, select = select)
-  return(fit)
-}
-
-#### Area1 per predire Area1 (train) ----
 import_A1 <- function() {
   
   # Load raster layers
@@ -952,6 +878,80 @@ import_A1 <- function() {
   
   return(s)
 }
+
+
+# Example usage:
+s2_agg <- import_A2()
+
+# We try to reduce the size for increase speed and a better view
+s2_agg <- aggregate(s2_agg, fact = 1, fun = mean)
+
+
+mess <- mess(s2_agg, train_data, full = TRUE, filename = "plots/MESS_raster/mess_Area2.tiff", overwrite=TRUE)
+names(mess) <- c("Slope", "East", "PlanarC", "ProfileC", "WD", "EWI", "FT", "TOTAL")
+
+### Individual plot MESS ----
+plot(mess)
+plot(mess[["FT"]], main="FT")
+plot(mess[["Slope"]], main="Slope")
+plot(mess[["East"]], main="East")
+plot(mess[["PlanarC"]], main="PlanarC")
+plot(mess[["ProfileC"]], main="ProfileC")
+plot(mess[["WD"]], main="WD")
+plot(mess[["EWI"]], main="EWI")
+#plot(mess[["NGSS"]], main="NGSS")
+plot(mess[["FT"]], main="FT")
+plot(mess[["TOTAL"]], main="TOTAL")
+
+## Mess con raster Area 2 ####
+keeps = c("Slope", "East", "PlanarC", "ProfileC", "WD", "EWI",  "FT")
+
+train_data <- Area2[ , keeps, drop = FALSE]
+
+## RASTER MESS
+
+# Example usage:
+s1_agg <- import_A1()
+
+s1_agg <- dropLayer(s1_agg, which(names(s1_agg) == "Cord_Y"))
+
+# We try to reduce the size for increase speed and a better view
+s1_agg <- aggregate(s1_agg, fact = 1, fun = mean)
+
+
+mess <- mess(s2_agg, train_data, full = TRUE, filename = "plots/MESS_raster/mess_Area1.tiff", overwrite=TRUE)
+names(mess) <- c("Slope", "East", "PlanarC", "ProfileC", "WD", "EWI", "FT", "TOTAL")
+
+### Individual plot MESS ----
+plot(mess)
+plot(mess[["FT"]], main="FT")
+plot(mess[["Slope"]], main="Slope")
+plot(mess[["East"]], main="East")
+plot(mess[["PlanarC"]], main="PlanarC")
+plot(mess[["ProfileC"]], main="ProfileC")
+plot(mess[["WD"]], main="WD")
+plot(mess[["EWI"]], main="EWI")
+#plot(mess[["NGSS"]], main="NGSS")
+plot(mess[["FT"]], main="FT")
+plot(mess[["TOTAL"]], main="TOTAL")
+
+
+## Apply model ####
+# Re-defining the functions
+# General formulas to fit presence1 
+fo.1 <- Crollo ~ Cord_Y + Slope + 
+  East+ PlanarC + ProfileC + WD + EWI + FT
+
+sfo.1 <- Crollo ~ s(Cord_Y) + s(Slope) + 
+  s(East) + s(PlanarC) + s(ProfileC) + s(WD) + s(EWI) + s(FT)
+
+# Function to train the GAM model
+my.gam <- function(formula, data, family = binomial, smooth_formula, method = "REML", select = TRUE) {
+  fit <- gam(smooth_formula, data = data, family = family, method = method, select = select)
+  return(fit)
+}
+
+#### Area1 per predire Area1 (train) ----
 
 # Example usage:
 s1 <- import_A1()
