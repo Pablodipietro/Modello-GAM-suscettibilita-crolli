@@ -13,21 +13,17 @@ Area 2: Comunità Montane Evançon, Monte Rosa e Walser Alta Valle del Lys.
 
 ## 📂 Struttura del Repository
 ````
-├── data/                     # Dati di input utilizzati per il modello
-│   ├── Area1_Rmodel.csv
-│   ├── Area2_Rmodel.csv
-│
-├── scripts/                  # Script R per l'analisi
-│   ├── MESS_comparison.R     # Script principale per l'analisi MESS e GAM
-│
-├── plots/                    # Output grafici generati dall'analisi
-│
-├── results/                  # Risultati finali e file CSV generati
-│   ├── mess_auroc_CV.csv     # Risultati del cross-validation MESS-AUROC
-│
-├── Tesi_VdA.pdf              # Documento completo della tesi
-│
-└── README.md                 # Questo file
+    ├── README.md
+    ├── Area1_Rmodel.csv  # Dati
+    ├── Area2_Rmodel.csv  # Dati
+    ├── main.R            # Script principale
+    ├── Area1/            # Dati e risultati per Area1
+    ├── Area2/            # Dati e risultati per Area2
+    └── plots/            # Grafici
+        ├── MESS_Area1/
+        ├── MESS_Area2/
+        └── Predictions/
+
 ````
 ## 🛠 Installazione
 1️⃣ Prerequisiti
